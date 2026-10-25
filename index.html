@@ -135,7 +135,7 @@ code{background:#000;padding:2px 6px;border-radius:6px;font-size:13px;word-break
 .ung-ho{text-align:center}
 .ung-ho img{max-width:150px;margin:14px auto 0;border-radius:10px}
 
-.noi{position:fixed;top:50%;transform:translateY(-50%);width:190px;background:var(--the);border:1px solid var(--vien);border-radius:16px;padding:18px;text-align:center;z-index:5;display:none;box-shadow:0 20px 50px #0007}
+.noi{position:absolute;top:0;will-change:transform;width:190px;background:var(--the);border:1px solid var(--vien);border-radius:16px;padding:18px;text-align:center;z-index:5;display:none;box-shadow:0 20px 50px #0007}
 .noi h4{font-size:16px;margin-bottom:6px}
 .noi p{color:var(--mo);font-size:13px;margin-bottom:12px}
 .noi .nut{width:100%;justify-content:center;padding:10px 6px;font-size:13px;margin-top:8px;white-space:nowrap}
@@ -190,7 +190,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
 <section id="tinh-nang" class="nen2">
   <div class="khung">
     <h2>Mọi thứ Bạn cần để hiểu game</h2>
-    <p class="phu">Không cần chờ bản Việt hóa. Game nào có phụ đề tiếng Anh là dịch được.</p>
+    <p class="phu">Game nào có phụ đề tiếng Anh là dịch được.</p>
     <div class="luoi">
       <div class="the"><div class="bieu">🧠</div><h3>AI dịch theo ngữ cảnh</h3><p>Hiểu cả câu chuyện, xưng hô tự nhiên như người Việt nói chuyện, không dịch máy từng chữ.</p></div>
       <div class="the"><div class="bieu">🗣️</div><h3>Mỗi nhân vật một giọng</h3><p>Đọc to bản dịch bằng giọng Việt, mỗi nhân vật được phân một giọng riêng.</p></div>
@@ -327,6 +327,15 @@ document.getElementById('nut-mac').onclick=()=>document.getElementById('chon-mac
   gan('mac',tim(pc,a=>/\.dmg$/i.test(a.name)&&!/intel/i.test(a.name)),'M1, M2, M3, M4…');
   gan('android',tim(dt,a=>/\.apk$/i.test(a.name)),'Điện thoại, máy tính bảng');
 })();
+// 2 thẻ nổi trượt theo khi lăn chuột (mượt, có độ trễ nhẹ)
+(()=>{const ns=[...document.querySelectorAll('.noi')];let cur=null;
+  const dich=()=>{const h=ns[0].offsetHeight>ns[1].offsetHeight?ns[0].offsetHeight:ns[1].offsetHeight;
+    const den=Math.max(scrollY+(innerHeight-h)/2,90);
+    cur=cur===null?den:cur+(den-cur)*0.08;
+    if(Math.abs(den-cur)<0.3)cur=den;
+    ns.forEach(n=>n.style.transform='translateY('+cur.toFixed(1)+'px)');
+    requestAnimationFrame(dich)};
+  requestAnimationFrame(dich)})();
 </script>
 </body>
 </html>
