@@ -135,6 +135,14 @@ code{background:#000;padding:2px 6px;border-radius:6px;font-size:13px;word-break
 .ung-ho{text-align:center}
 .ung-ho img{max-width:150px;margin:14px auto 0;border-radius:10px}
 
+.noi{position:fixed;top:50%;transform:translateY(-50%);width:190px;background:var(--the);border:1px solid var(--vien);border-radius:16px;padding:18px;text-align:center;z-index:5;display:none;box-shadow:0 20px 50px #0007}
+.noi h4{font-size:16px;margin-bottom:6px}
+.noi p{color:var(--mo);font-size:13px;margin-bottom:12px}
+.noi .nut{width:100%;justify-content:center;padding:10px 6px;font-size:13px;margin-top:8px;white-space:nowrap}
+.noi img{width:150px;margin:0 auto;border-radius:10px}
+.noi-trai{left:calc((100vw - 1100px)/4 - 95px)}
+.noi-phai{right:calc((100vw - 1100px)/4 - 95px)}
+@media(min-width:1520px){.noi{display:block}.cong-duoi{display:none}}
 footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:var(--mo);font-size:14px}
 </style>
 </head>
@@ -167,8 +175,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
     </div>
     <div>
       <div class="clip">
-        <video id="video" src="video/clip1.mp4" poster="video/clip1.jpg" autoplay muted playsinline preload="metadata"></video>
-        <button class="bat-tieng" id="bat-tieng">🔇 Bật tiếng</button>
+        <video id="video" src="video/clip1.mp4" poster="video/clip1.jpg" autoplay muted playsinline controls preload="metadata"></video>
       </div>
       <div class="chon-clip" id="chon-clip">
         <button class="dang" data-so="1"><img src="video/clip1.jpg" alt="Clip 1"></button>
@@ -204,12 +211,11 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
     <div class="nhom-tai">
 
       <div class="the">
-        <span class="so-nhom">NHÓM 1</span>
         <h3>💻 Ứng dụng cho máy tính</h3>
         <p class="mo">Cài trên máy tính Windows hoặc Mac. Dùng được cho:</p>
         <ul class="dung">
           <li><span class="ic">📺</span><div><b>Chơi PS4, PS5 trực tiếp trên TV</b><span>Máy tính gửi phụ đề đã dịch sang tiếng Việt đè lên phụ đề gốc trên TV, đọc thoại ngay trên TV.</span>
-            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i><i>TV Box Android</i>… và <i>TV LG</i></div></div></li>
+            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i>… và <i>TV LG</i></div></div></li>
           <li><span class="ic">🖥️</span><div><b>Chơi game trên máy tính</b><span>Steam, Epic hay bất kỳ game nào: dịch phụ đề và đọc thoại ngay trên màn hình máy tính.</span></div></li>
           <li><span class="ic">🎮</span><div><b>Chơi PS4, PS5 trên màn hình máy tính</b><span>Dịch và đọc trên màn hình phụ: laptop, điện thoại, hoặc nếu Bạn có 2 màn hình thì chơi game ở 1 màn, dịch ở màn còn lại.</span></div></li>
         </ul>
@@ -224,12 +230,11 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
       </div>
 
       <div class="the">
-        <span class="so-nhom">NHÓM 2</span>
         <h3>📱 Ứng dụng cho Android</h3>
         <p class="mo">Cài trên điện thoại hoặc máy tính bảng Android. Không cần máy tính.</p>
         <ul class="dung">
           <li><span class="ic">📺</span><div><b>Chơi PS4, PS5 trực tiếp trên TV</b><span>Điện thoại hoặc máy tính bảng gửi phụ đề đã dịch sang tiếng Việt đè lên phụ đề gốc trên TV, đọc thoại ngay trên TV.</span>
-            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i><i>TV Box Android</i>… và <i>TV LG</i></div></div></li>
+            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i>… và <i>TV LG</i></div></div></li>
           <li><span class="ic">📲</span><div><b>Không cần máy tính</b><span>Chỉ cần điện thoại hoặc máy tính bảng cùng mạng wifi với PS4, PS5 và TV là chơi được.</span></div></li>
           <li><span class="ic">🔊</span><div><b>Mỗi nhân vật một giọng</b><span>Thoại được đọc to bằng giọng Việt ngay trên loa TV, Bạn chỉ việc ngồi chơi.</span></div></li>
         </ul>
@@ -271,7 +276,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
   </div>
 </section>
 
-<section class="nen2">
+<section class="nen2 cong-duoi">
   <div class="khung cong">
     <div class="the">
       <h3 style="font-size:22px">👥 Cộng đồng &amp; hỗ trợ</h3>
@@ -289,17 +294,28 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
   </div>
 </section>
 
+<aside class="noi noi-trai">
+  <h4>👥 Cộng đồng</h4>
+  <p>Hỏi đáp, góp ý và nhận tin cập nhật sớm nhất.</p>
+  <a class="nut nut-cam" href="https://www.facebook.com/groups/1617718573193579" target="_blank" rel="noopener">Nhóm Facebook</a>
+  <a class="nut nut-vien" href="https://zalo.me/0888868086" target="_blank" rel="noopener">Zalo: 08888 68086</a>
+</aside>
+<aside class="noi noi-phai">
+  <h4>☕ Ủng hộ tác giả</h4>
+  <p>Ứng dụng miễn phí. Mỗi ly cà phê giúp tác giả làm thêm tính năng mới.</p>
+  <img src="anh/ung-ho.jpg" alt="Mã QR ủng hộ">
+</aside>
+
 <footer>
   <div class="khung">© 2026 Dịch Phụ Đề Game · Làm bởi Hoàng Trần · Miễn phí cho cộng đồng game thủ Việt</div>
 </footer>
 
 <script>
 // Clip đầu trang: tự chuyển clip, bấm ảnh nhỏ để chọn
-const v=document.getElementById('video'),nb=document.getElementById('bat-tieng'),ds=[...document.querySelectorAll('#chon-clip button')];
-let so=1;const mo=n=>{so=n;v.src='video/clip'+n+'.mp4';v.poster='video/clip'+n+'.jpg';v.play().catch(()=>{});ds.forEach(b=>b.classList.toggle('dang',b.dataset.so==n))};
+const v=document.getElementById('video'),ds=[...document.querySelectorAll('#chon-clip button')];
+let so=1;const mo=n=>{so=n;const m=v.muted,a=v.volume;v.src='video/clip'+n+'.mp4';v.poster='video/clip'+n+'.jpg';v.muted=m;v.volume=a;v.play().catch(()=>{});ds.forEach(b=>b.classList.toggle('dang',b.dataset.so==n))};
 ds.forEach(b=>b.onclick=()=>mo(+b.dataset.so));
 v.onended=()=>mo(so%3+1);
-nb.onclick=()=>{v.muted=!v.muted;nb.textContent=v.muted?'🔇 Bật tiếng':'🔊 Tắt tiếng';v.play().catch(()=>{})};
 // Nút Mac: bấm mới hiện 2 loại chip
 document.getElementById('nut-mac').onclick=()=>document.getElementById('chon-mac').classList.toggle('mo-ra');
 // Tự tìm bản mới nhất trên GitHub để nút tải luôn đúng
