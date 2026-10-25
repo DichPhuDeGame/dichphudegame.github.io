@@ -101,6 +101,8 @@ nav a:hover{color:var(--chu)}
 .chon-mac{display:none;grid-column:1/-1;grid-template-columns:1fr 1fr;gap:12px;background:#0f1115;border:1px dashed var(--vien);border-radius:12px;padding:12px}
 .chon-mac.mo-ra{display:grid}
 .chon-mac .nut{flex-direction:column;gap:2px;padding:12px}
+.nut-xanh{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;box-shadow:0 8px 24px #2563eb40}
+.nut-xanh:hover{transform:translateY(-2px)}
 .nut-xam{background:var(--vien);color:var(--mo);cursor:default}
 .mot-nut .nut{width:100%;justify-content:center}
 
@@ -279,8 +281,8 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
           <a class="nut nut-cam" id="tai-win" href="https://github.com/HoangTran4869/DichPhuDeGame/releases/latest"><span>⬇ Tải cho Windows<small class="ban" id="ban-win">Windows 10 / 11</small></span></a>
           <button class="nut nut-cam" id="nut-mac"><span>⬇ Tải cho MacOS<small class="ban">Bấm để chọn loại chip</small></span></button>
           <div class="chon-mac" id="chon-mac">
-            <a class="nut nut-cam" id="tai-mac" href="https://github.com/HoangTran4869/DichPhuDeGame/releases"><span>🍎 Mac chip M</span><small class="ban" id="ban-mac">M1, M2, M3, M4…</small></a>
-            <span class="nut nut-xam"><span>🖥️ Mac chip Intel</span><small class="ban">Sắp ra mắt</small></span>
+            <a class="nut nut-xanh" id="tai-mac" href="https://github.com/HoangTran4869/DichPhuDeGame/releases"><span>🍎 Mac chip M</span><small class="ban" id="ban-mac">M1, M2, M3, M4…</small></a>
+            <a class="nut nut-xam" id="tai-intel"><span>🖥️ Mac chip Intel</span><small class="ban" id="ban-intel">Sắp ra mắt</small></a>
           </div>
         </div>
       </div>
@@ -360,7 +362,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
     <h2>Hỏi đáp nhanh</h2>
     <p class="phu">Chưa thấy câu trả lời? Hỏi ngay trong nhóm Facebook hoặc Zalo bên dưới.</p>
     <div class="hoi">
-      <details><summary>Ứng dụng có mất phí không?</summary><p>Hoàn toàn miễn phí, không có gói trả phí. Nếu thấy hữu ích, Bạn có thể ủng hộ tác giả tùy tâm.</p></details>
+      <details><summary>Ứng dụng có mất phí không?</summary><p><b style="color:#5ee28c">Hoàn toàn miễn phí</b>, không có gói trả phí. Nếu thấy hữu ích, Bạn có thể ủng hộ tác giả tùy tâm.</p></details>
       <details><summary>Mã Gemini và Groq là gì? Có tốn tiền không?</summary><p><b style="color:#5ee28c">Hoàn toàn không tốn tiền.</b> Đây là mã để dùng AI dịch, Bạn tự tạo miễn phí bằng tài khoản Google, không cần thẻ ngân hàng. Mã chỉ lưu trên máy của Bạn, không gửi cho ai. Ứng dụng có hướng dẫn chi tiết từng bước.</p></details>
       <details><summary>Game nào dịch được?</summary><p>Hầu hết game có phụ đề tiếng Anh: chơi trên máy tính, PS5 hoặc qua thiết bị ghi hình (capture card).</p></details>
       <details><summary>Chơi PS5 thì dùng thế nào?</summary><p>Ứng dụng lấy hình từ PS5 qua tính năng Chơi từ xa trên máy tính hoặc điện thoại, rồi hiện bản dịch trên màn hình đó hoặc đè lên TV.</p></details>
@@ -420,6 +422,8 @@ document.getElementById('nut-mac').onclick=()=>document.getElementById('chon-mac
   const [pc,dt]=await Promise.all([lay('DichPhuDeGame'),lay('DichPhuDeGame-Android')]);
   gan('win',tim(pc,a=>/\.exe$/i.test(a.name)),'Windows 10 / 11');
   gan('mac',tim(pc,a=>/\.dmg$/i.test(a.name)&&!/intel/i.test(a.name)),'M1, M2, M3, M4…');
+  const it=tim(await lay('DichPhuDeGame-MacIntel'),a=>/\.dmg$/i.test(a.name));
+  if(it){const n=document.getElementById('tai-intel');n.className='nut nut-xanh';gan('intel',it,'Mac đời cũ chip Intel')}
   gan('android',tim(dt,a=>/\.apk$/i.test(a.name)),'Điện thoại, máy tính bảng');
 })();
 // Bước 3: khung kéo đổi giữa ĐÚNG / SAI
