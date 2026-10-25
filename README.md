@@ -1,2 +1,3 @@
-# dichphudegame.github.io
-Trang chủ Dịch Phụ Đề Game – dịch phụ đề game tiếng Anh sang tiếng Việt, miễn phí
+# Dịch Phụ Đề Game
+
+Trang chủ: https://dichphudegame.github.io

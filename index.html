@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dịch Phụ Đề Game – Dịch game sang tiếng Việt miễn phí</title>
+<meta name="description" content="Ứng dụng dịch phụ đề game tiếng Anh sang tiếng Việt bằng AI, có giọng đọc. Miễn phí cho Windows, Mac, Android, PS5 và TV.">
+<meta property="og:title" content="Dịch Phụ Đề Game – Miễn phí">
+<meta property="og:description" content="Chơi game tiếng Anh, hiểu bằng tiếng Việt. Dịch AI theo ngữ cảnh, có giọng đọc, dùng được cả PS5 và TV.">
+<meta property="og:image" content="https://dichphudegame.github.io/anh/logo.png">
+<link rel="icon" href="anh/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1115;--bg2:#161a21;--the:#1c212b;--vien:#2a313d;
+  --chu:#eef1f6;--mo:#a3acbb;--cam:#ff8a4c;--cam2:#ffac64;--xanh:#2dbe60;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--chu);font-family:"Be Vietnam Pro",system-ui,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--cam2);text-decoration:none}
+img{max-width:100%;display:block}
+.khung{max-width:1100px;margin:0 auto;padding:0 16px}
+section{padding:72px 0}
+h2{font-size:clamp(26px,4vw,36px);font-weight:800;text-align:center;margin-bottom:12px}
+.phu{color:var(--mo);text-align:center;max-width:640px;margin:0 auto 40px}
+.nut{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:12px;font-weight:700;transition:.2s;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.nut-cam{background:linear-gradient(135deg,var(--cam),#ff6a2a);color:#fff;box-shadow:0 8px 24px #ff7a3a40}
+.nut-cam:hover{transform:translateY(-2px);box-shadow:0 12px 30px #ff7a3a60}
+.nut-vien{border:1.5px solid var(--vien);color:var(--chu)}
+.nut-vien:hover{border-color:var(--cam)}
+
+/* Thanh trên */
+header{position:sticky;top:0;z-index:10;background:#0f1115e6;backdrop-filter:blur(10px);border-bottom:1px solid var(--vien)}
+.thanh{display:flex;align-items:center;justify-content:space-between;height:64px}
+.ten{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--chu)}
+.ten img{width:36px;height:36px}
+nav a{color:var(--mo);margin-left:22px;font-weight:500;font-size:15px}
+nav a:hover{color:var(--chu)}
+@media(max-width:760px){nav .an{display:none}}
+
+/* Đầu trang */
+.dau{padding:64px 0 40px;text-align:center;background:radial-gradient(ellipse at top,#ff8a4c22,transparent 60%)}
+.dau .logo{width:120px;height:120px;margin:0 auto 20px;filter:drop-shadow(0 10px 30px #ff8a4c55)}
+.nhan{display:inline-block;background:#2dbe6022;color:#5ee28c;border:1px solid #2dbe6055;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;margin-bottom:18px}
+.dau h1{font-size:clamp(32px,6vw,58px);font-weight:800;line-height:1.15;margin-bottom:16px}
+.dau h1 span{background:linear-gradient(135deg,var(--cam),var(--cam2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dau p{color:var(--mo);font-size:clamp(16px,2vw,19px);max-width:620px;margin:0 auto 30px}
+.nhom-nut{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* Minh họa */
+.minh-hoa{max-width:900px;margin:48px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--vien);position:relative;box-shadow:0 30px 80px #0008}
+.minh-hoa .viet{position:absolute;left:50%;bottom:31%;transform:translateX(-50%);width:84%;background:#000c;border:2px solid var(--xanh);border-radius:12px;padding:12px 16px;font-weight:700;font-size:clamp(13px,2.2vw,22px);line-height:1.4;text-align:center}
+.minh-hoa .viet small{display:block;color:var(--mo);font-weight:500;font-size:.7em}
+.minh-hoa .loa{position:absolute;right:3%;top:5%;background:#000a;border-radius:99px;padding:6px 12px;font-size:clamp(11px,1.5vw,14px)}
+
+/* Thiết bị */
+.thiet-bi{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:36px}
+.thiet-bi span{background:var(--the);border:1px solid var(--vien);padding:8px 16px;border-radius:99px;font-size:14px;font-weight:500}
+
+/* Tính năng */
+.luoi{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.the{background:var(--the);border:1px solid var(--vien);border-radius:16px;padding:24px;transition:.2s}
+.the:hover{border-color:#ff8a4c88;transform:translateY(-3px)}
+.the .bieu{font-size:30px;margin-bottom:10px}
+.the h3{font-size:18px;margin-bottom:6px}
+.the p{color:var(--mo);font-size:15px}
+.nen2{background:var(--bg2)}
+
+/* Tải về */
+.tai{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.tai .the{text-align:center;display:flex;flex-direction:column;align-items:center}
+.tai .the .bieu{font-size:40px}
+.tai .ban{color:var(--mo);font-size:14px;margin:4px 0 18px;min-height:22px}
+.tai .nut{margin-top:auto;width:100%;justify-content:center}
+.tai .sap{opacity:.55}
+.tai .sap .nut{background:var(--vien);color:var(--mo);box-shadow:none;cursor:default}
+.ghi-tv{text-align:center;color:var(--mo);margin-top:26px;font-size:15px}
+
+/* Các bước */
+.buoc{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:800px){.buoc{grid-template-columns:1fr}}
+.buoc ol{list-style:none;counter-reset:b}
+.buoc li{counter-increment:b;position:relative;padding:0 0 26px 58px}
+.buoc li::before{content:counter(b);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--cam),#ff6a2a);display:grid;place-items:center;font-weight:800}
+.buoc li b{display:block;font-size:18px}
+.buoc li span{color:var(--mo)}
+.buoc img{border-radius:14px;border:1px solid var(--vien)}
+
+/* Hỏi đáp */
+.hoi{max-width:760px;margin:0 auto}
+details{background:var(--the);border:1px solid var(--vien);border-radius:14px;margin-bottom:12px;padding:18px 22px}
+summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--cam);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mo);margin-top:10px}
+code{background:#000;padding:2px 6px;border-radius:6px;font-size:13px;word-break:break-all}
+
+/* Cộng đồng */
+.cong{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+@media(max-width:800px){.cong{grid-template-columns:1fr}}
+.cong .the{padding:30px}
+.lien-he{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.ung-ho{text-align:center}
+.ung-ho img{max-width:260px;margin:16px auto 0;border-radius:14px}
+
+footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:var(--mo);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="khung thanh">
+    <a class="ten" href="#"><img src="anh/logo.png" alt="">Dịch Phụ Đề Game</a>
+    <nav>
+      <a class="an" href="#tinh-nang">Tính năng</a>
+      <a class="an" href="#huong-dan">Hướng dẫn</a>
+      <a class="an" href="#hoi-dap">Hỏi đáp</a>
+      <a href="#tai-ve" style="color:var(--cam2);font-weight:700">Tải về</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dau">
+  <div class="khung">
+    <img class="logo" src="anh/logo.png" alt="Logo Dịch Phụ Đề Game">
+    <div class="nhan">✓ MIỄN PHÍ 100%</div>
+    <h1>Chơi game tiếng Anh,<br><span>hiểu bằng tiếng Việt</span></h1>
+    <p>Ứng dụng đọc phụ đề trong game, dịch sang tiếng Việt bằng AI theo ngữ cảnh và đọc to bằng giọng Việt. Dùng trên máy tính, điện thoại, PS5 và cả TV.</p>
+    <div class="nhom-nut">
+      <a class="nut nut-cam" href="#tai-ve">⬇ Tải miễn phí</a>
+      <a class="nut nut-vien" href="#tinh-nang">Xem tính năng</a>
+    </div>
+
+    <div class="minh-hoa">
+      <img src="anh/demo.jpg" alt="Minh họa phụ đề game được dịch sang tiếng Việt" width="1280" height="720">
+      <div class="loa">🔊 Đang đọc giọng Việt</div>
+      <div class="viet">Chúng ta phải tới Asgard trước khi trời tối, nhóc. Bám sát ta và để mắt cho kỹ.<small>Bản dịch hiện ngay trên màn hình game</small></div>
+    </div>
+
+    <div class="thiet-bi">
+      <span>💻 Windows</span><span>🍎 Mac</span><span>📱 Android</span><span>🎮 PS5</span><span>📺 Android TV / Google TV</span><span>📺 TV LG</span>
+    </div>
+  </div>
+</div>
+
+<section id="tinh-nang" class="nen2">
+  <div class="khung">
+    <h2>Mọi thứ Bạn cần để hiểu game</h2>
+    <p class="phu">Không cần chờ bản Việt hóa. Game nào có phụ đề tiếng Anh là dịch được.</p>
+    <div class="luoi">
+      <div class="the"><div class="bieu">🧠</div><h3>AI dịch theo ngữ cảnh</h3><p>Hiểu cả câu chuyện, xưng hô tự nhiên như người Việt nói chuyện, không dịch máy từng chữ.</p></div>
+      <div class="the"><div class="bieu">🗣️</div><h3>Mỗi nhân vật một giọng</h3><p>Đọc to bản dịch bằng giọng Việt, mỗi nhân vật được phân một giọng riêng.</p></div>
+      <div class="the"><div class="bieu">🎮</div><h3>Chơi PS5 vẫn dịch được</h3><p>Lấy hình từ PS5 qua máy tính hoặc điện thoại, dịch ngay khi Bạn đang chơi.</p></div>
+      <div class="the"><div class="bieu">📺</div><h3>Chữ và giọng lên TV</h3><p>Bản dịch hiện đè lên phụ đề gốc trên TV Android TV, Google TV và TV LG.</p></div>
+      <div class="the"><div class="bieu">🎤</div><h3>Dịch cả màn hình</h3><p>Bấm nút Mic trên tay cầm hoặc phím tắt để dịch toàn bộ chữ đang hiện.</p></div>
+      <div class="the"><div class="bieu">📋</div><h3>Dịch menu, nhiệm vụ</h3><p>Không chỉ lời thoại, cả menu, mô tả vật phẩm và nhiệm vụ cũng hiểu được.</p></div>
+      <div class="the"><div class="bieu">📡</div><h3>Chế độ Stream</h3><p>Phần mềm livestream thấy được chữ dịch, người xem cũng hiểu cùng Bạn.</p></div>
+      <div class="the"><div class="bieu">💸</div><h3>Miễn phí, không giới hạn</h3><p>Không gói trả phí, không giới hạn ngày dùng. Tự cập nhật khi có bản mới.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="tai-ve">
+  <div class="khung">
+    <h2>Tải về miễn phí</h2>
+    <p class="phu">Chọn thiết bị của Bạn. Ứng dụng sẽ tự báo khi có bản mới.</p>
+    <div class="tai">
+      <div class="the"><div class="bieu">💻</div><h3>Windows</h3><div class="ban" id="ban-win">Windows 10 / 11</div><a class="nut nut-cam" id="tai-win" href="https://github.com/HoangTran4869/DichPhuDeGame/releases/latest">⬇ Tải cho Windows</a></div>
+      <div class="the"><div class="bieu">🍎</div><h3>Mac (chip M)</h3><div class="ban" id="ban-mac">Mac chip M1, M2, M3, M4…</div><a class="nut nut-cam" id="tai-mac" href="https://github.com/HoangTran4869/DichPhuDeGame/releases">⬇ Tải cho Mac</a></div>
+      <div class="the sap"><div class="bieu">🖥️</div><h3>Mac (chip Intel)</h3><div class="ban">Sắp có</div><span class="nut">Sắp ra mắt</span></div>
+      <div class="the"><div class="bieu">📱</div><h3>Android</h3><div class="ban" id="ban-android">Điện thoại Android</div><a class="nut nut-cam" id="tai-android" href="https://github.com/HoangTran4869/DichPhuDeGame-Android/releases/latest">⬇ Tải cho Android</a></div>
+    </div>
+    <p class="ghi-tv">📺 Dùng với TV? Sau khi cài ứng dụng trên máy tính hoặc điện thoại, mở <b>Cài đặt → TV</b> để được hướng dẫn cài lên TV.</p>
+  </div>
+</section>
+
+<section id="huong-dan" class="nen2">
+  <div class="khung buoc">
+    <div>
+      <h2 style="text-align:left">Bắt đầu trong 3 bước</h2>
+      <p class="phu" style="text-align:left;margin-left:0">Lần đầu mở, ứng dụng có hướng dẫn từng bước cho Bạn.</p>
+      <ol>
+        <li><b>Cài ứng dụng</b><span>Tải bản cho thiết bị của Bạn ở mục Tải về.</span></li>
+        <li><b>Nhập mã dịch miễn phí</b><span>Tạo mã Gemini và Groq miễn phí theo hướng dẫn trong ứng dụng, chỉ mất vài phút.</span></li>
+        <li><b>Kéo khung quanh phụ đề và chơi</b><span>Kéo khung vừa ôm phụ đề game như hình bên. Xong, cứ chơi, ứng dụng tự dịch.</span></li>
+      </ol>
+    </div>
+    <img src="anh/keo-khung.jpg" alt="Cách kéo khung quanh phụ đề đúng và sai" loading="lazy">
+  </div>
+</section>
+
+<section id="hoi-dap">
+  <div class="khung">
+    <h2>Hỏi đáp nhanh</h2>
+    <p class="phu">Chưa thấy câu trả lời? Hỏi ngay trong nhóm Facebook hoặc Zalo bên dưới.</p>
+    <div class="hoi">
+      <details><summary>Ứng dụng có mất phí không?</summary><p>Hoàn toàn miễn phí, không có gói trả phí. Nếu thấy hữu ích, Bạn có thể ủng hộ tác giả tùy tâm.</p></details>
+      <details><summary>Mã Gemini và Groq là gì? Có tốn tiền không?</summary><p>Đây là mã để dùng AI dịch, Bạn tự tạo miễn phí bằng tài khoản Google. Mã chỉ lưu trên máy của Bạn, không gửi cho ai. Ứng dụng có hướng dẫn chi tiết từng bước.</p></details>
+      <details><summary>Game nào dịch được?</summary><p>Hầu hết game có phụ đề tiếng Anh: chơi trên máy tính, PS5 hoặc qua thiết bị ghi hình (capture card).</p></details>
+      <details><summary>Chơi PS5 thì dùng thế nào?</summary><p>Ứng dụng lấy hình từ PS5 qua tính năng Chơi từ xa trên máy tính hoặc điện thoại, rồi hiện bản dịch trên màn hình đó hoặc đè lên TV.</p></details>
+      <details><summary>Mac báo “không thể mở” hoặc “chuyển vào thùng rác”?</summary><p>Vào Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật → bấm “Vẫn mở”. Nếu vẫn không được, mở Terminal và dán lệnh: <code>xattr -cr /Applications/DichPhuDeGame.app</code></p></details>
+      <details><summary>Làm sao để cập nhật bản mới?</summary><p>Ứng dụng tự báo khi có bản mới, Bạn chỉ cần bấm vào thông báo để tải.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="nen2">
+  <div class="khung cong">
+    <div class="the">
+      <h2 style="text-align:left">Cộng đồng &amp; hỗ trợ</h2>
+      <p style="color:var(--mo)">Tham gia nhóm để hỏi đáp, góp ý và nhận tin cập nhật sớm nhất.</p>
+      <div class="lien-he">
+        <a class="nut nut-cam" href="https://www.facebook.com/groups/1617718573193579" target="_blank" rel="noopener">👥 Nhóm Facebook</a>
+        <a class="nut nut-vien" href="https://zalo.me/0888868086" target="_blank" rel="noopener">💬 Zalo hỗ trợ: 08888 68086</a>
+      </div>
+    </div>
+    <div class="the ung-ho">
+      <h3 style="font-size:22px">☕ Ủng hộ tác giả</h3>
+      <p style="color:var(--mo)">Ứng dụng miễn phí. Mỗi ly cà phê giúp tác giả duy trì và làm thêm tính năng mới.</p>
+      <img src="anh/ung-ho.jpg" alt="Mã QR ủng hộ" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="khung">© 2026 Dịch Phụ Đề Game · Làm bởi Hoàng Trần · Miễn phí cho cộng đồng game thủ Việt</div>
+</footer>
+
+<script>
+// Tự tìm bản mới nhất trên GitHub để nút tải luôn đúng
+(async()=>{
+  const lay=async(kho)=>{try{const r=await fetch('https://api.github.com/repos/HoangTran4869/'+kho+'/releases?per_page=20');return r.ok?await r.json():[]}catch(e){return[]}};
+  const tim=(ds,dk)=>{for(const r of ds){if(r.draft||r.prerelease)continue;const a=(r.assets||[]).find(dk);if(a)return{url:a.browser_download_url,ban:r.tag_name}}};
+  const gan=(id,kq,ten)=>{if(!kq)return;document.getElementById('tai-'+id).href=kq.url;document.getElementById('ban-'+id).textContent=ten+' · bản '+kq.ban.replace(/^v/i,'')};
+  const [pc,dt]=await Promise.all([lay('DichPhuDeGame'),lay('DichPhuDeGame-Android')]);
+  gan('win',tim(pc,a=>/\.exe$/i.test(a.name)),'Windows 10 / 11');
+  gan('mac',tim(pc,a=>/\.dmg$/i.test(a.name)&&!/intel/i.test(a.name)),'Mac chip M');
+  gan('android',tim(dt,a=>/\.apk$/i.test(a.name)),'Điện thoại Android');
+})();
+</script>
+</body>
+</html>
