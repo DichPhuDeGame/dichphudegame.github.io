@@ -43,13 +43,14 @@ nav a:hover{color:var(--chu)}
 
 /* Đầu trang */
 .dau{padding:56px 0 64px;background:radial-gradient(ellipse at 20% 0,#ff8a4c26,transparent 55%)}
-.dau-luoi{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.dau-luoi{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 @media(max-width:900px){.dau-luoi{grid-template-columns:1fr;text-align:center}.dau .nhom-nut,.dau .tin{justify-content:center}}
 .dau .logo{width:84px;height:84px;margin-bottom:18px;filter:drop-shadow(0 10px 30px #ff8a4c55)}
 @media(max-width:900px){.dau .logo{margin:0 auto 18px}}
 .nhan{display:inline-block;background:#2dbe6022;color:#5ee28c;border:1px solid #2dbe6055;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;margin-bottom:16px}
-.dau h1{font-size:clamp(30px,3.5vw,46px);font-weight:800;line-height:1.15;margin-bottom:16px}
-.dau h1 span{background:linear-gradient(135deg,var(--cam),var(--cam2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.dau h1{font-size:clamp(26px,3.4vw,44px);font-weight:800;line-height:1.15;margin-bottom:16px}
+.dau h1 .lien{white-space:nowrap;background:none;-webkit-background-clip:initial;background-clip:initial;color:inherit}
+.dau h1 span:not(.lien){background:linear-gradient(135deg,var(--cam),var(--cam2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .dau p{color:var(--mo);font-size:clamp(16px,1.6vw,18px);margin-bottom:26px}
 .nhom-nut{display:flex;gap:12px;flex-wrap:wrap}
 .tin{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;color:var(--mo);font-size:14px}
@@ -75,7 +76,10 @@ nav a:hover{color:var(--chu)}
 .nen2{background:var(--bg2)}
 
 /* Tải về */
-.nhom-tai{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+.nhom-tai{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.nhom-tai .the{display:flex;flex-direction:column}
+.nhom-tai .dung{flex:1}
+.nhom-tai .the:hover{transform:none}
 @media(max-width:900px){.nhom-tai{grid-template-columns:1fr}}
 .nhom-tai .the{padding:30px}
 .so-nhom{display:inline-block;background:#ff8a4c22;color:var(--cam2);border-radius:99px;padding:4px 12px;font-size:13px;font-weight:700;margin-bottom:10px}
@@ -86,6 +90,8 @@ nav a:hover{color:var(--chu)}
 .dung .ic{font-size:26px;line-height:1.2;flex:none}
 .dung b{display:block;margin-bottom:2px}
 .dung span{color:var(--mo);font-size:14.5px}
+.ho-tro-tv b{display:inline!important;color:var(--chu)}
+.so-nhom{align-self:flex-start}
 .ho-tro-tv{font-size:13.5px;color:var(--mo);margin-top:6px}
 .ho-tro-tv i{font-style:normal;background:var(--vien);padding:2px 8px;border-radius:6px;margin:2px 2px 0 0;display:inline-block;color:var(--chu)}
 .nut-tai{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -120,7 +126,9 @@ details p{color:var(--mo);margin-top:10px}
 code{background:#000;padding:2px 6px;border-radius:6px;font-size:13px;word-break:break-all}
 
 /* Cộng đồng */
-.cong{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:start}
+.cong{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.cong .the{display:flex;flex-direction:column;justify-content:center}
+.cong .the:hover{transform:none}
 @media(max-width:800px){.cong{grid-template-columns:1fr}}
 .cong .the{padding:30px}
 .lien-he{display:flex;flex-direction:column;gap:12px;margin-top:18px}
@@ -149,7 +157,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
     <div>
       <img class="logo" src="anh/logo.png" alt="Logo Dịch Phụ Đề Game">
       <div><span class="nhan">✓ MIỄN PHÍ 100%</span></div>
-      <h1>Chơi game tiếng Anh,<br><span>hiểu bằng tiếng Việt</span></h1>
+      <h1><span class="lien">Chơi game tiếng Anh,</span><br><span>hiểu bằng tiếng Việt</span></h1>
       <p>Ứng dụng đọc phụ đề trong game, dịch sang tiếng Việt bằng AI theo ngữ cảnh và đọc to bằng giọng Việt. Chơi trên máy tính, PS4, PS5 và hiện thẳng lên TV.</p>
       <div class="nhom-nut">
         <a class="nut nut-cam" href="#tai-ve">⬇ Tải miễn phí</a>
@@ -201,7 +209,7 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
         <p class="mo">Cài trên máy tính Windows hoặc Mac. Dùng được cho:</p>
         <ul class="dung">
           <li><span class="ic">📺</span><div><b>Chơi PS4, PS5 trực tiếp trên TV</b><span>Máy tính gửi phụ đề đã dịch sang tiếng Việt đè lên phụ đề gốc trên TV, đọc thoại ngay trên TV.</span>
-            <div class="ho-tro-tv">Hỗ trợ: <i>Android TV / Google TV</i><i>Sony</i><i>TCL</i><i>Xiaomi…</i><i>TV LG</i></div></div></li>
+            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i><i>TV Box Android</i>… và <i>TV LG</i></div></div></li>
           <li><span class="ic">🖥️</span><div><b>Chơi game trên máy tính</b><span>Steam, Epic hay bất kỳ game nào: dịch phụ đề và đọc thoại ngay trên màn hình máy tính.</span></div></li>
           <li><span class="ic">🎮</span><div><b>Chơi PS4, PS5 trên màn hình máy tính</b><span>Dịch và đọc trên màn hình phụ: laptop, điện thoại, hoặc nếu Bạn có 2 màn hình thì chơi game ở 1 màn, dịch ở màn còn lại.</span></div></li>
         </ul>
@@ -221,7 +229,9 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
         <p class="mo">Cài trên điện thoại hoặc máy tính bảng Android. Không cần máy tính.</p>
         <ul class="dung">
           <li><span class="ic">📺</span><div><b>Chơi PS4, PS5 trực tiếp trên TV</b><span>Điện thoại hoặc máy tính bảng gửi phụ đề đã dịch sang tiếng Việt đè lên phụ đề gốc trên TV, đọc thoại ngay trên TV.</span>
-            <div class="ho-tro-tv">Hỗ trợ: <i>Android TV / Google TV</i><i>Sony</i><i>TCL</i><i>Xiaomi…</i><i>TV LG</i></div></div></li>
+            <div class="ho-tro-tv">Hỗ trợ TV chạy <b>Android TV / Google TV</b>: <i>Sony</i><i>TCL</i><i>Xiaomi</i><i>Coocaa</i><i>Casper</i><i>Philips</i><i>Toshiba</i><i>Sharp</i><i>TV Box Android</i>… và <i>TV LG</i></div></div></li>
+          <li><span class="ic">📲</span><div><b>Không cần máy tính</b><span>Chỉ cần điện thoại hoặc máy tính bảng cùng mạng wifi với PS4, PS5 và TV là chơi được.</span></div></li>
+          <li><span class="ic">🔊</span><div><b>Mỗi nhân vật một giọng</b><span>Thoại được đọc to bằng giọng Việt ngay trên loa TV, Bạn chỉ việc ngồi chơi.</span></div></li>
         </ul>
         <div class="mot-nut"><a class="nut nut-cam" id="tai-android" href="https://github.com/HoangTran4869/DichPhuDeGame-Android/releases/latest"><span>⬇ Tải cho Android<small class="ban" id="ban-android">Điện thoại, máy tính bảng</small></span></a></div>
       </div>
@@ -264,8 +274,8 @@ footer{border-top:1px solid var(--vien);padding:30px 0;text-align:center;color:v
 <section class="nen2">
   <div class="khung cong">
     <div class="the">
-      <h2 style="text-align:left">Cộng đồng &amp; hỗ trợ</h2>
-      <p style="color:var(--mo)">Tham gia nhóm để hỏi đáp, góp ý và nhận tin cập nhật sớm nhất.</p>
+      <h3 style="font-size:22px">👥 Cộng đồng &amp; hỗ trợ</h3>
+      <p style="color:var(--mo)">Tham gia nhóm để hỏi đáp, góp ý, chia sẻ game hay và nhận tin cập nhật sớm nhất. Gặp lỗi khi cài đặt? Nhắn Zalo để được hỗ trợ trực tiếp.</p>
       <div class="lien-he">
         <a class="nut nut-cam" href="https://www.facebook.com/groups/1617718573193579" target="_blank" rel="noopener">👥 Nhóm Facebook</a>
         <a class="nut nut-vien" href="https://zalo.me/0888868086" target="_blank" rel="noopener">💬 Zalo hỗ trợ: 08888 68086</a>
