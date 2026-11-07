@@ -24,21 +24,21 @@ li{margin:4px 0}
 <body>
 <main>
 <h1>Chính sách quyền riêng tư</h1>
-<div class="ngay">Ứng dụng “Dịch Phụ Đề Game” trên iPhone · Cập nhật ngày 30/10/2026</div>
+<div class="ngay">Ứng dụng “Dịch Phụ Đề Game” trên iPhone · Cập nhật ngày 07/11/2026</div>
 
-<div class="the"><b>Tóm tắt:</b> Ứng dụng không có máy chủ riêng, không thu thập, không bán và không theo dõi dữ liệu của Bạn. Chỉ phần chữ phụ đề cần dịch được gửi tới dịch vụ AI Google Gemini bằng mã Gemini do chính Bạn nhập, và chỉ sau khi Bạn đồng ý.</div>
+<div class="the"><b>Tóm tắt:</b> Ứng dụng không có máy chủ riêng, không thu thập, không bán và không theo dõi dữ liệu của Bạn. Chỉ phần chữ cần dịch được gửi tới dịch vụ AI Google Gemini và Groq bằng mã do chính Bạn nhập, và chỉ sau khi Bạn đồng ý.</div>
 
 <h2>1. Dữ liệu được gửi đi khi dịch</h2>
 <ul>
-<li>Khi Bạn bật dịch, ứng dụng đọc chữ phụ đề trong khung Bạn chọn <b>ngay trên iPhone</b> (Apple Vision). Hình ảnh <b>không</b> được gửi đi.</li>
-<li>Chỉ <b>phần chữ</b> đọc được (câu thoại tiếng Anh, vài câu trước đó, tên game và ghi chú từ Bạn đặt để dịch đúng ngữ cảnh) được gửi tới <b>Google Gemini</b> để dịch sang tiếng Việt, bằng mã Gemini của chính Bạn.</li>
-<li>Việc Google xử lý dữ liệu này tuân theo chính sách của Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> và điều khoản Gemini API.</li>
+<li>Khi Bạn bật dịch, ứng dụng đọc chữ phụ đề trong khung Bạn chọn (hoặc chữ trên cả màn hình khi Bạn bấm “Dịch toàn màn hình” / nút Mic) <b>ngay trên iPhone</b> (Apple Vision). Hình ảnh <b>không</b> được gửi đi.</li>
+<li>Chỉ <b>phần chữ</b> đọc được (câu thoại tiếng Anh, vài câu trước đó, tên game và ghi chú từ Bạn đặt để dịch đúng ngữ cảnh) được gửi tới <b>Google Gemini</b> (máy dịch chính) hoặc <b>Groq</b> (máy dịch dự phòng khi Google quá tải) để dịch sang tiếng Việt, bằng mã của chính Bạn.</li>
+<li>Việc Google xử lý dữ liệu này tuân theo chính sách của Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> và điều khoản Gemini API; Groq tuân theo <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">groq.com/privacy-policy</a>.</li>
 <li>Ứng dụng hỏi Bạn đồng ý trước khi gửi lần đầu. Bạn có thể tắt dịch bất cứ lúc nào.</li>
 </ul>
 
 <h2>2. Dữ liệu chỉ lưu trên iPhone của Bạn</h2>
 <ul>
-<li>Mã Gemini, cài đặt (giọng đọc, cỡ chữ, khung dịch), danh sách game và ghi chú từ.</li>
+<li>Mã Gemini / Groq, cài đặt (giọng đọc, cỡ chữ, khung dịch), danh sách game và ghi chú từ.</li>
 <li>Thông tin ghép đôi máy chơi game (địa chỉ trong mạng nhà, mã đăng ký Chơi từ xa).</li>
 <li>Nhật ký hoạt động để tìm lỗi.</li>
 </ul>
@@ -47,8 +47,10 @@ li{margin:4px 0}
 <h2>3. Đăng nhập tài khoản máy chơi game</h2>
 <p>Ứng dụng mở <b>trang đăng nhập chính chủ của Sony</b> ngay trong ứng dụng. Mật khẩu Bạn gõ trên trang của Sony, ứng dụng <b>không đọc và không lưu mật khẩu</b>. Ứng dụng chỉ nhận mã tài khoản cần thiết để ghép đôi tính năng Chơi từ xa, và lưu mã đó trên iPhone.</p>
 
-<h2>4. Mạng cục bộ</h2>
+<h2>4. Mạng cục bộ và TV</h2>
 <p>Ứng dụng dùng quyền mạng cục bộ để tìm và kết nối máy chơi game trong cùng mạng Wi-Fi nhà Bạn. Hình và tiếng chỉ đi trực tiếp giữa máy chơi game và iPhone.</p>
+<p>Khi Bạn kết nối ứng dụng “Dịch Game TV” trên TV của mình, chữ dịch và giọng đọc được gửi <b>trực tiếp trong mạng nhà</b> từ iPhone sang TV đó, không qua máy chủ nào.</p>
+<p>Khi Bạn bấm tải giọng Piper, ứng dụng tải bộ giọng (mã nguồn mở sherpa-onnx) từ GitHub. Việc tải không gửi dữ liệu cá nhân nào.</p>
 
 <h2>5. Mua trong ứng dụng</h2>
 <p>Dùng thử và mở khoá do <b>Apple</b> xử lý qua App Store. Nhà phát triển không nhận và không lưu thông tin thanh toán của Bạn.</p>
